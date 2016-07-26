@@ -1,0 +1,28 @@
+oracle常用sql
+--查詢数据库表名和注释
+select a.TABLE_NAME,b.COMMENTS
+from user_tables a,user_tab_comments b
+WHERE a.TABLE_NAME=b.TABLE_NAME
+order by TABLE_NAME 
+
+
+查询表的备注信息
+SELECT
+  TABLE_NAME,
+  TABLE_TYPE,
+  COMMENTS
+FROM
+  USER_TAB_COMMENTS
+WHERE
+  TABLE_NAME = 'MR_DEPT;
+搜索
+ 查询字段的备注信息
+
+SELECT
+  TABLE_NAME,
+  COLUMN_NAME,
+  COMMENTS
+FROM
+  USER_COL_COMMENTS
+WHERE
+  TABLE_NAME = 'MR_DEPT;
