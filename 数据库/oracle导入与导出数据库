@@ -15,9 +15,9 @@ oracle导出与导入数据库命令
 
 导出
 --exp 用户名/密码@SID file=f:\xx.dmp owner=用户名
-exp SLSADMIN_SHANDONG/SLSADMIN_SHANDONG@ORCL file=D:\orcle.dmp owner=SLSADMIN_SHANDONG
+exp SLSADMIN_HUNAN/SLSADMIN_HUNAN@ORCL file=D:\orcle20160725.dmp owner=SLSADMIN_HUNAN
 导入
-imp SLSADMIN_SHANDONG/SLSADMIN_SHANDONG@ORCL file=D:\orcle.dmp owner=SLSADMIN_SHANDONG
+imp SLSADMIN_HUNAN/SLSADMIN_HUNAN@ORCL file=D:\orcle0725.dmp pull=Y
 imp bi/bi@orcl123 file=D:\orcle.dmp owner=bi
 
 只查询名字的话用如下语句：
@@ -25,3 +25,6 @@ select tablespace_name from dba_tablespaces;
 　　表空间含义：
 　　表空间是数据库的逻辑划分，一个表空间只能属于一个数据库。所有的数据库对象都存放在指定的表空间中。但主要存放的是表， 所以称作表空间。
 　　Oracle数据库中至少存在一个表空间，即SYSTEM的表空间。
+
+
+imp SLSADMIN_SHANDONG/SLSADMIN_SHANDONG@ORCL file=D:\orcle.dmp owner=SLSADMIN_SHANDONG

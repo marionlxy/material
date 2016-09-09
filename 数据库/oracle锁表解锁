@@ -9,3 +9,8 @@ select b.username,b.sid,b.serial#,logon_time from v$locked_object a,v$session b 
 (4)杀掉对应进程
 执行命令：alter system kill session'1025,41';搜索
 其中1025为sid,41为serial#.
+
+
+
+
+
