@@ -13,7 +13,7 @@ github.com/tangyouhua/program-resource/blob/master/program-interview/java-baidu-
 6. BS与CS的联系与区别
 7. Cookie 和 Session的区别
 1. fail-fast 与 fail-safe 机制有什么区别
-1. get 和 post请求的区别
+1. ~~get 和 post请求的区别（已知）~~
 1. Interface 与 abstract 类的区别
 1. IOC的优点是什么
 1. IO 和 NIO的区别，NIO优点
@@ -38,10 +38,15 @@ github.com/tangyouhua/program-resource/blob/master/program-interview/java-baidu-
 1. 什么是懒加载（Lazy Loading）
 1. 什么是尾递归，为什么需要尾递归
 1. 什么是控制反转（Inversion of Control）与依赖注入（Dependency Injection）
-1. 什么是finalize()方法
-1. finalize()方法什么时候被调用
-1. 析构函数(finalization)的目的是什么
-1. final 和 finalize 的区别
+
+关键字
+
+finalize
+
+什么是finalize()方法
+finalize()方法什么时候被调用
+析构函数(finalization)的目的是什么
+final 和 finalize 的区别
 
 final
 
