@@ -1,10 +1,9 @@
 Java 面试题 ：百度前 200 页都在这里
 
-
 来源：唐尤华，
 github.com/tangyouhua/program-resource/blob/master/program-interview/java-baidu-200.md
 
-基本概念
+#基本概念
 
 操作系统中 heap 和 stack 的区别
 什么是基于注解的切面实现
@@ -39,18 +38,12 @@ WEB容器主要有哪些功能? 并请列出一些常见的WEB容器名字。
 什么是懒加载（Lazy Loading）
 什么是尾递归，为什么需要尾递归
 什么是控制反转（Inversion of Control）与依赖注入（Dependency Injection）
-
-关键字
-
-finalize
-
 什么是finalize()方法
 finalize()方法什么时候被调用
 析构函数(finalization)的目的是什么
+
 final 和 finalize 的区别
-
 final
-
 final关键字有哪些用法
 final 与 static 关键字可以用于哪里？它们的作用是什么
 final, finally, finalize的区别
@@ -96,9 +89,9 @@ while 循环和 do 循环有什么不同
 
 操作符
 
-&操作符和&&操作符有什么区别?
+&amp;操作符和&amp;&amp;操作符有什么区别?
 a = a + b 与 a += b 的区别？
-逻辑操作符 (&,|,^)与条件操作符(&&,||)的区别
+逻辑操作符 (&amp;,|,^)与条件操作符(&amp;&amp;,||)的区别
 3*0.1 == 0.3 将会返回什么？true 还是 false？
 float f=3.4; 是否正确？
 short s1 = 1; s1 = s1 + 1;有什么错?
