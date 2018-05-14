@@ -1,6 +1,6 @@
 IO流分分类
 
-2016-06-24 网络 -zklarry IT小子
+
 1）输入流和输出流
 所谓IO即输入输出，输入是对数据进行“读（read）”操作，从外存读到内存中，谓之“入”；输出是对数据进行“写（write）”操作，从内存写到外存，谓之“出”。从输入输出这个角度，可以将IO类分为两大类，即输入流和输出流，输入流定义了读数据的方法，输出流定义了写数据的方法。
 IO中所有输入流都是InputStream类或者Reader类的子类。凡是类名以InputStream结尾的类都是InputStream的子类，如FileInputStream等。同样的，
@@ -16,4 +16,3 @@ Reader和Writer的子类都是字符流，都将数据按照16位的字符方式
 （2）public BufferedReader(Reader in)：BufferedReader类的构造方法参数是Reader类型对象，也就是说BufferedReader可以封装任意一种Reader类型对象，如FileReader、StringReader等。
         通过上面构造方法的比较可见，FileReader类直接封装数据源，这样的流类称为节点流，如StringReader、CharArrayReader都是节点流，都直接封装某种特定类型的数据源。而BufferedReader类封装的是流对象，而不是特定类型的数据源，称为过滤流。节点流是输入输出时必须使用的类，用来将数据源转换成IO对象。而过滤流用来封装流对象，往往用来增强其他流对象的功能，起到的是“锦上添花”的作用。
 通过对IO流类进行不同角度的分类，读者可以快速了解IO包的结构。IO包中主要有4个顶级抽象类，即InputStream、OutputStream、Reader、Writer。它们的子类分别是字节输入流、字节输出流、字符输入流、字符输出流。而根据封装类型的不同，流又可以分为节点流和过滤流。如果流封装的是某种特定的数据源，如文件、字符串、字符数组等，则称为节点流，如果流封装的是其他流对象，称为过滤流。
-阅读 6赞 投诉
