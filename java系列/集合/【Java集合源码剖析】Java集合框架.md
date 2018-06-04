@@ -7,4 +7,4 @@
 
 Java集合类的整体框架如下：
 
- ![My image](https://github.com/marionlxy/material/blob/796f973c8d5aa616eb4e0cd8307bb60914b90732/java%E7%B3%BB%E5%88%97/%E9%9B%86%E5%90%88/image/20140628144205625.png)
+> ![My image](https://github.com/marionlxy/material/blob/796f973c8d5aa616eb4e0cd8307bb60914b90732/java%E7%B3%BB%E5%88%97/%E9%9B%86%E5%90%88/image/20140628144205625.png)
