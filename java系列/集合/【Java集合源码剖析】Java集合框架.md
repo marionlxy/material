@@ -12,7 +12,7 @@ Java集合类的整体框架如下：
 
 
 从上图中可以看出，集合类主要分为两大类：Collection和Map。
-
+ ```` 
     Collection是List、Set等集合高度抽象出来的接口，它包含了这些集合的基本操作，它主要又分为两大部分：List和Set。
 
     List接口通常表示一个列表（数组、队列、链表、栈等），其中的元素可以重复，常用实现类为ArrayList和LinkedList，另外还有不常用的Vector。另外，LinkedList还是实现了Queue接口，因此也可以作为队列使用。
@@ -26,3 +26,12 @@ Java集合类的整体框架如下：
     Iterator是遍历集合的迭代器（不能遍历Map，只用来遍历Collection），Collection的实现类都实现了iterator()函数，它返回一个Iterator对象，用来遍历集合，ListIterator则专门用来遍历List。而Enumeration则是JDK1.0时引入的，作用与Iterator相同，但它的功能比Iterator要少，它只能再Hashtable、Vector和Stack中使用。
 
     Arrays和Collections是用来操作数组、集合的两个工具类，例如在ArrayList和Vector中大量调用了Arrays.Copyof()方法，而Collections中有很多静态方法可以返回各集合类的synchronized版本，即线程安全的版本，当然了，如果要用线程安全的结合类，首选Concurrent并发包下的对应的集合类。
+ ````   
+ 
+* 【Java集合源码剖析】ArrayList源码剖析<https://blog.csdn.net/ns_code/article/details/35568011>
+* 【Java集合源码剖析】LinkedList源码剖析<https://blog.csdn.net/ns_code/article/details/35787253>
+* 【Java集合源码剖析】Vector源码剖析<https://blog.csdn.net/ns_code/article/details/35793865>
+* 【Java集合源码剖析】HashMap源码剖析<https://blog.csdn.net/ns_code/article/details/36034955>
+* 【Java集合源码剖析】Hashtable源码剖析<https://blog.csdn.net/ns_code/article/details/36191279>
+* 【Java集合源码剖析】TreeMap源码剖析<https://blog.csdn.net/ns_code/article/details/36421085>
+* 【Java集合源码剖析】LinkedHashmap源码剖析<https://blog.csdn.net/ns_code/article/details/37867985>
