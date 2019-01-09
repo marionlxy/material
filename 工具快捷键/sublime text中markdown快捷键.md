@@ -15,4 +15,6 @@ MarkdownEditting 提供了一些方便的 snippet 以及快捷键，熟练使用
 1. alt+b 加粗
 1. +enter _有序列表_（斜体alt+i）
 * +enter 无序
-* 
+toc 目录生成规则
+
+参考 [github链接](https://github.com/naokazuterada/MarkdownTOC#customizing-generation-of-toc-using-attributes)
