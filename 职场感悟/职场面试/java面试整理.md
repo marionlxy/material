@@ -3,7 +3,7 @@ Java 面试题 ：百度前 200 页都在这里，加任务列表
 来源：唐尤华，
 github.com/tangyouhua/program-resource/blob/master/program-interview/java-baidu-200.md
 
-[TOC]
+
 # 基本概念
 
 ##### 1. 操作系统中 heap 和 stack 的区别
@@ -752,5 +752,5 @@ Nginx、lighttpd、Apache三大主流 Web服务器的区别
 
 计算1000月
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMjIzNzg3Ml19
+eyJoaXN0b3J5IjpbLTIyOTUyMjg0NCwtNDAyMjM3ODcyXX0=
 -->
