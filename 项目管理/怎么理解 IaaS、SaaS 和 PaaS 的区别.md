@@ -14,4 +14,4 @@
 
 另外参考阮一峰的披萨图解：
 [链接](http://www.ruanyifeng.com/blog/2017/07/iaas-paas-saas.html)
-![Alt text](/images/bg2017072301.jpg "Optional title")
+![Alt text](https://github.com/marionlxy/material/blob/master/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/images/bg2017072301.jpg "Optional title")
