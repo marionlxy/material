@@ -3,7 +3,7 @@
 卷序列号为 B6E5-BD9E
 E:.
 │  .gitignore
-│  info.txt
+│  info.md
 │  README.md
 │  Welcome file.md
 │  
@@ -95,8 +95,9 @@ E:.
 │      Sublime Text 3 快捷键汇总.md
 │      sublime text中markdown快捷键.md
 │      
-├─微服务
-│      常用的分布式事务解决方案介绍有多少种.md
+├─操作系统
+│      Shell.md
+│      后端程序员必备的Linux基础知识.md
 │      
 ├─数据库
 │  │  postgreSQL与MySQL之间的差异.md
@@ -120,12 +121,58 @@ E:.
 │          如何做可靠的分布式锁，Redlock真的可行么.md
 │          
 ├─数据结构和算法
+│  │  Leetcode-LinkList1.md
+│  │  常见安全算法（MD5、SHA1、Base64等等）总结.md
+│  │  搞定BAT面试——几道常见的子符串算法题.md
 │  │  数据结构.md
+│  │  算法.md
 │  │  
-│  └─常见算法题解析
+│  ├─source code
+│  │  └─securityAlgorithm
+│  │      │  .classpath
+│  │      │  .gitignore
+│  │      │  .project
+│  │      │  pom.xml
+│  │      │  
+│  │      ├─.settings
+│  │      │      org.eclipse.core.resources.prefs
+│  │      │      org.eclipse.jdt.core.prefs
+│  │      │      org.eclipse.m2e.core.prefs
+│  │      │      
+│  │      └─src
+│  │          ├─main
+│  │          │  └─java
+│  │          │      └─com
+│  │          │          └─snailclimb
+│  │          │              └─ks
+│  │          │                  └─securityAlgorithm
+│  │          │                          Base64Demo.java
+│  │          │                          DesDemo.java
+│  │          │                          IDEADemo.java
+│  │          │                          MD5.java
+│  │          │                          MD5Demo.java
+│  │          │                          readme
+│  │          │                          RSADemo.java
+│  │          │                          SHA1Demo.java
+│  │          │                          
+│  │          └─test
+│  │              └─java
+│  │                  └─com
+│  │                      └─snailclimb
+│  │                          └─ks
+│  │                              └─securityAlgorithm
+│  │                                      AppTest.java
+│  │                                      
+│  └─算法题解析
+│      ├─公司真题
+│      │      网易2018校招编程题1-3.md
+│      │      
 │      └─剑指offer
-│              (1)斐波那契数列问题和跳台阶问题.md
-│              (2)二维数组查找和替换空格问题.md
+│              （1）斐波那契数列问题和跳台阶问题.md
+│              （2）二维数组查找和替换空格问题.md
+│              （3）数值的整数次方和调整数组元素顺序.md
+│              （4）链表相关编程题.md
+│              （5）栈变队列和栈的压入、弹出序列.md
 │              
 ├─架构设计
 │  ├─spring
@@ -145,8 +192,12 @@ E:.
 │  │          一问搞懂rabbitmq.md
 │  │          消息队列message-queue.md
 │  │          
+│  ├─分布式
+│  │      分布式.md
+│  │      
 │  ├─微服务
 │  │      PDF-修改版-极客时间-图片-杨波-微服务架构.pdf
+│  │      常用的分布式事务解决方案介绍有多少种.md
 │  │      
 │  ├─搜索
 │  │  │  Elasticsearch与Solr 选型.md
@@ -211,6 +262,14 @@ E:.
 │  │  程序员为什么要时刻保持危机感？.md
 │  │  
 │  └─湖南极视科技
+├─计算机网络与数据通信
+│      dubbo.md
+│      message-queue.md
+│      rabbitmq.md
+│      干货：计算机网络知识总结.md
+│      数据通信(RESTful、RPC、消息队列).md
+│      计算机网络.md
+│      
 ├─设计模式
 │  │  设计模式.md
 │  │  
@@ -224,7 +283,6 @@ E:.
 │      awesome.md
 │      
 ├─问题集锦
-│      git快速入门.md
 │      maven问题集锦.md
 │      端口占用.md
 │      
@@ -235,6 +293,25 @@ E:.
 │  ├─images
 │  │      互联网高并发知识点-石杉.png
 │  │      
+│  ├─java面试
+│  │  │  books.md
+│  │  │  interviewPrepare.md
+│  │  │  java programmer need know.md
+│  │  │  JavaInterviewGithub.md
+│  │  │  java面试整理.md
+│  │  │  手把手教你用Markdown写一份高质量的简历.md
+│  │  │  程序员的简历之道.md
+│  │  │  简历模板.md
+│  │  │  美团-基础篇.md
+│  │  │  美团-终结篇.md
+│  │  │  美团-进阶篇.md
+│  │  │  面试必备之乐观锁与悲观锁.md
+│  │  │  
+│  │  └─最最最常见的Java面试题总结
+│  │          第一周（2018-8-7）.md
+│  │          第二周(2018-8-13).md
+│  │          第四周(2018-8-30).md
+│  │          
 │  └─职场面试
 │          java面试整理.md
 │          
