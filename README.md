@@ -5,6 +5,5 @@
 
 ## 大纲
 
-卷 文档 的文件夹 PATH 列表
-卷序列号为 B6E5-BD9E  
+1. win7 显示文档目录树tree /f > info.md
 
