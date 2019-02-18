@@ -7,3 +7,4 @@
 
 1. win7 显示文档目录树tree /f > info.md
 
+![Alt text](https://flic.kr/p/2eEs451 "Optional title")
