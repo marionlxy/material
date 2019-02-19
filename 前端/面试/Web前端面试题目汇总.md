@@ -27,7 +27,7 @@ HTML结构：
 CSS：
 
 .wrapper{position:relative;}
-    .content{
+.content{
         background-color:#6699FF;
         width:200px;
         height:200px;
