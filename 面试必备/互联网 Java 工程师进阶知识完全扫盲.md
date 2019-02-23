@@ -113,3 +113,6 @@
 - 你所知道的微服务技术栈都有哪些？
 - Eureka 和 Zookeeper 都可以提供服务注册与发现的功能，它们有什么区别？
 - ......
+
+
+books参考:https://doocs.github.io/advanced-java/#/?id=%E4%BA%92%E8%81%94%E7%BD%91-java-%E5%B7%A5%E7%A8%8B%E5%B8%88%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86%E5%AE%8C%E5%85%A8%E6%89%AB%E7%9B%B2

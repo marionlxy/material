@@ -1,2 +1,1 @@
-如何进行系统拆分
-https://www.cnblogs.com/mengchunchen/p/10071053.html
+## 首先参考互联网进阶知识扫盲 ##
