@@ -77,3 +77,4 @@ synchronized void setB() throws Exception{
 
 参考：
 [锁分类](https://blog.csdn.net/qq_35181209/article/details/77652278)
+[美团技术团队，总结的很好](https://tech.meituan.com/2018/11/15/java-lock.html)
