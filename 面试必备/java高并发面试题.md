@@ -69,7 +69,8 @@ CAS是乐观锁技术，当多个线程尝试使用CAS同时更新同一个变�
 通过Unsafe类可以分配内存，可以释放内存；
 类中提供的3个本地方法allocateMemory、reallocateMemory、freeMemory分别用于分配内存，扩充内存和释放内存，与C语言中的3个方法对应。
 可以定位对象某字段的内存位置，也可以修改对象的字段值，即使它是私有的；
-挂起与恢复:将一个线程进行挂起是通过park方法实现的，调用 park后，线程将一直阻塞直到超时或者中断等条件出现。unpark可以终止一个挂起的线程，使其恢复正常。整个并发框架中对线程的挂起操作被封装在 LockSupport类中，LockSupport类中有各种版本pack方法，但最终都调用了Unsafe.park()方法。
+挂起与恢复:将一个线程进行挂起是通过park方法实现的，调用 park后，线程将一直阻塞直到超时或者中断等条件出现。
+unpark可以终止一个挂起的线程，使其恢复正常。整个并发框架中对线程的挂起操作被封装在 LockSupport类中，LockSupport类中有各种版本pack方法，但最终都调用了Unsafe.park()方法。
 
 
 12、线程池
@@ -117,13 +118,14 @@ newFixedThreadPool :创建一个定长线程池，可控制线程最大并发数
 newScheduledThreadPool:创建一个定长线程池，支持定时及周期性任务执行
 
 15、CopyOnWriteArrayList
-CopyOnWriteArrayList : 写时加锁，当添加一个元素的时候，将原来的容器进行copy，复制出一个新的容器，然后在新的容器里面写，写完之后再将原容器的引用指向新的容器，而读的时候是读旧容器的数据，所以可以进行并发的读，但这是一种弱一致性的策略。 
+CopyOnWriteArrayList : 写时加锁，当添加一个元素的时候，将原来的容器进行copy，复制出一个新的容器，然后在新的容器里面写，写完之后再将原容器的引用指向新的容器，
+而读的时候是读旧容器的数据，所以可以进行并发的读，但这是一种弱一致性的策略。 
 使用场景：CopyOnWriteArrayList适合使用在读操作远远大于写操作的场景里，比如缓存。
 
 16、AQS
 AQS使用一个int成员变量来表示同步状态，通过内置的FIFO队列来完成获取资源线程的排队工作。
 private volatile int state;//共享变量，使用volatile修饰保证线程可见性
-1
+
 2种同步方式：独占式，共享式。独占式如ReentrantLock，共享式如Semaphore，CountDownLatch，组合式的如ReentrantReadWriteLock
 节点的状态 
 CANCELLED，值为1，表示当前的线程被取消； 
@@ -136,23 +138,26 @@ PROPAGATE，值为-3，表示当前场景下后续的acquireShared能够得以�
 　protected boolean tryRelease(int arg) ：独占式释放同步状态，等待中的其他线程此时将有机会获取到同步状态； 
 　protected int tryAcquireShared(int arg) ：共享式获取同步状态，返回值大于等于0，代表获取成功；反之获取失败； 
 　protected boolean tryReleaseShared(int arg) ：共享式释放同步状态，成功为true，失败为false 
-AQS维护一个共享资源state，通过内置的FIFO来完成获取资源线程的排队工作。该队列由一个一个的Node结点组成，每个Node结点维护一个prev引用和next引用，分别指向自己的前驱和后继结点。双端双向链表。 
+AQS维护一个共享资源state，通过内置的FIFO来完成获取资源线程的排队工作。该队列由一个一个的Node结点组成，每个Node结点维护一个prev引用和next引用，分别指向自己的前驱和后继结点。双端双向链表。
+
 独占式:乐观的并发策略 
 acquire 
 　a.首先tryAcquire获取同步状态，成功则直接返回；否则，进入下一环节； 
 b.线程获取同步状态失败，就构造一个结点，加入同步队列中，这个过程要保证线程安全； 
 　c.加入队列中的结点线程进入自旋状态，若是老二结点（即前驱结点为头结点），才有机会尝试去获取同步状态；否则，当其前驱结点的状态为SIGNAL，线程便可安心休息，进入阻塞状态，直到被中断或者被前驱结点唤醒。 
+
 release 
 release的同步状态相对简单，需要找到头结点的后继结点进行唤醒，若后继结点为空或处于CANCEL状态，从后向前遍历找寻一个正常的结点，唤醒其对应线程。
 共享式: 
 共享式地获取同步状态.同步状态的方法tryAcquireShared返回值为int。 
 a.当返回值大于0时，表示获取同步状态成功，同时还有剩余同步状态可供其他线程获取； 
-　b.当返回值等于0时，表示获取同步状态成功，但没有可用同步状态了； 
-　c.当返回值小于0时，表示获取同步状态失败。
+b.当返回值等于0时，表示获取同步状态成功，但没有可用同步状态了； 
+c.当返回值小于0时，表示获取同步状态失败。
+
 AQS实现公平锁和非公平锁 
 非公平锁中，那些尝试获取锁且尚未进入等待队列的线程会和等待队列head结点的线程发生竞争。公平锁中，在获取锁时，增加了isFirst(current)判断，当且仅当，等待队列为空或当前线程是等待队列的头结点时，才可尝试获取锁。 
 
-Java并发包基石-AQS详解
+
 16、Java里的阻塞队列
 7个阻塞队列。分别是
 ArrayBlockingQueue ：一个由数组结构组成的有界阻塞队列。 
@@ -178,12 +183,11 @@ take：删除队列头部元素，如果队列为空，一直阻塞到队列有�
 17、condition
 对Condition的源码理解，主要就是理解等待队列，等待队列可以类比同步队列，而且等待队列比同步队列要简单，因为等待队列是单向队列，同步队列是双向队列。
 
-java condition使用及分
 
 18、DelayQueue
 队列中每个元素都有个过期时间，并且队列是个优先级队列，当从队列获取元素时候，只有过期元素才会出队列。
 
-并发队列-无界阻塞延迟队列delayqueue原理探究
+
 
 19、Fork/Join框架
 　Fork/Join框架是Java 7提供的一个用于并行执行任务的框架，是一个把大任务分割成若干个小任务，最终汇总每个小任务结果后得到大任务结果的框架。Fork/Join框架要完成两件事情：
@@ -206,34 +210,8 @@ java condition使用及分
 Fork/Join框架的实现原理 
 　　ForkJoinPool由ForkJoinTask数组和ForkJoinWorkerThread数组组成，ForkJoinTask数组负责将存放程序提交给ForkJoinPool，而ForkJoinWorkerThread负责执行这
 
-20、原子操作类
-在java.util.concurrent.atomic包下，可以分为四种类型的原子更新类：原子更新基本类型、原子更新数组类型、原子更新引用和原子更新属性。
+20、原子操作类（可以参考，美团，最最最）
 
-原子更新基本类型 
-使用原子方式更新基本类型，共包括3个类： 
-AtomicBoolean：原子更新布尔变量 
-AtomicInteger：原子更新整型变量 
-AtomicLong：原子更新长整型变量
-原子更新数组 
-通过原子更新数组里的某个元素，共有3个类： 
-AtomicIntegerArray：原子更新整型数组的某个元素 
-AtomicLongArray：原子更新长整型数组的某个元素 
-AtomicReferenceArray：原子更新引用类型数组的某个元素 
-AtomicIntegerArray常用的方法有： 
-int addAndSet(int i, int delta)：以原子方式将输入值与数组中索引为i的元素相加 
-boolean compareAndSet(int i, int expect, int update)：如果当前值等于预期值，则以原子方式更新数组中索引为i的值为update值
-原子更新引用类型 
-AtomicReference：原子更新引用类型 
-AtomicReferenceFieldUpdater：原子更新引用类型里的字段 
-AtomicMarkableReference：原子更新带有标记位的引用类型。
-原子更新字段类 
-如果需要原子更新某个类的某个字段，就需要用到原子更新字段类，可以使用以下几个类： 
-AtomicIntegerFieldUpdater：原子更新整型字段 
-AtomicLongFieldUpdater：原子更新长整型字段 
-AtomicStampedReference：原子更新带有版本号的引用类型。 
-要想原子更新字段，需要两个步骤： 
-每次必须使用newUpdater创建一个更新器，并且需要设置想要更新的类的字段 
-更新类的字段（属性）必须为public volatile
 
 21、同步屏障CyclicBarrier
 CyclicBarrier 的字面意思是可循环使用（Cyclic）的屏障（Barrier）。它要做的事情是，让一组线程到达一个屏障（也可以叫同步点）时被阻塞，直到最后一个线程到达屏障时，屏障才会开门，所有被屏障拦截的线程才会继续干活。CyclicBarrier默认的构造方法是CyclicBarrier(int parties)，其参数表示屏障拦截的线程数量，每个线程调用await方法告诉CyclicBarrier我已经到达了屏障，然后当前线程被阻塞。 
@@ -269,9 +247,12 @@ Semaphore可以用于做流量控制，特别公用资源有限的应用场景�
 共享内存( shared memory ) ：共享内存就是映射一段能被其他进程所访问的内存，这段共享内存由一个进程创建，但多个进程都可以访问。共享内存是最快的 IPC 方式，它是针对其他进程间通信方式运行效率低而专门设计的。它往往与其他通信机制，如信号量，配合使用，来实现进程间的同步和通信。
 套接字( socket ) ： 套解口也是一种进程间通信机制，与其他通信机制不同的是，它可用于不同机器间的进程通信。
 中断
-interrupt()的作用是中断本线程。 
-本线程中断自己是被允许的；其它线程调用本线程的interrupt()方法时，会通过checkAccess()检查权限。这有可能抛出SecurityException异常。 
-如果本线程是处于阻塞状态：调用线程的wait(), wait(long)或wait(long, int)会让它进入等待(阻塞)状态，或者调用线程的join(), join(long), join(long, int), sleep(long), sleep(long, int)也会让它进入阻塞状态。若线程在阻塞状态时，调用了它的interrupt()方法，那么它的“中断状态”会被清除并且会收到一个InterruptedException异常。例如，线程通过wait()进入阻塞状态，此时通过interrupt()中断该线程；调用interrupt()会立即将线程的中断标记设为“true”，但是由于线程处于阻塞状态，所以该“中断标记”会立即被清除为“false”，同时，会产生一个InterruptedException的异常。 
+
+25.interrupt()的作用是中断本线程。 
+本线程中断自己是被允许的；
+其它线程调用本线程的interrupt()方法时，会通过checkAccess()检查权限。这有可能抛出SecurityException异常。 
+如果本线程是处于阻塞状态：调用线程的wait(), wait(long)或wait(long, int)会让它进入等待(阻塞)状态，或者调用线程的join(), join(long), join(long, int), sleep(long), sleep(long, int)也会让它进入阻塞状态。
+若线程在阻塞状态时，调用了它的interrupt()方法，那么它的“中断状态”会被清除并且会收到一个InterruptedException异常。例如，线程通过wait()进入阻塞状态，此时通过interrupt()中断该线程；调用interrupt()会立即将线程的中断标记设为“true”，但是由于线程处于阻塞状态，所以该“中断标记”会立即被清除为“false”，同时，会产生一个InterruptedException的异常。 
 如果线程被阻塞在一个Selector选择器中，那么通过interrupt()中断它时；线程的中断标记会被设置为true，并且它会立即从选择操作中返回。 
 如果不属于前面所说的情况，那么通过interrupt()中断线程时，它的中断标记会被设置为“true”。 
 中断一个“已终止的线程”不会产生任何操作。
@@ -280,6 +261,7 @@ interrupt()的作用是中断本线程。
 通常，我们通过“中断”方式终止处于“阻塞状态”的线程。 
 当线程由于被调用了sleep(), wait(), join()等方法而进入阻塞状态；若此时调用线程的interrupt()将线程的中断标记设为true。由于处于阻塞状态，中断标记会被清除，同时产生一个InterruptedException异常。将InterruptedException放在适当的为止就能终止线程， 
 终止处于“运行状态”的线程
+
 interrupted() 和 isInterrupted()的区别
 最后谈谈 interrupted() 和 isInterrupted()。 
 interrupted() 和 isInterrupted()都能够用于检测对象的“中断标记”。 
