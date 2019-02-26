@@ -65,7 +65,7 @@ public class GCTest {
 添加的参数：`-XX:+PrintGCDetails`
 ![](http://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-8-26/10317146.jpg)
 
-运行结果：
+运行结果(红色字体描述有误，应该是对应于JDK1.7的永久代)：
 
 ![](http://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-8-26/28954286.jpg)
 
@@ -359,6 +359,7 @@ G1收集器的运作大致分为以下几个步骤：
 
 - 《深入理解Java虚拟机：JVM高级特性与最佳实践（第二版》
 - https://my.oschina.net/hosee/blog/644618
+
 
 
 
