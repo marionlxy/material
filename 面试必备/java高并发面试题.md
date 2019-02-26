@@ -53,21 +53,24 @@ Volatile和Synchronized四个不同点：
 粒度不同，前者针对变量 ，后者锁对象和类
 syn阻塞，volatile线程不阻塞
 syn保证三大特性，volatile不保证原子性
-syn编译器优化，volatile不优化 
+syn编译器优化，volatile不优化
+
 要使 volatile 变量提供理想的线程安全，必须同时满足下面两个条件： 
 对变量的写操作不依赖于当前值。
 该变量没有包含在具有其他变量的不变式中。
-JAVA多线程之volatile 与 synchronized 的比较
+
+
 
 10、CAS
 CAS是乐观锁技术，当多个线程尝试使用CAS同时更新同一个变量时，只有其中一个线程能更新变量的值，而其它线程都失败，失败的线程并不会被挂起，而是被告知这次竞争中失败，并可以再次尝试。CAS有3个操作数，内存值V，旧的预期值A，要修改的新值B。当且仅当预期值A和内存值V相同时，将内存值V修改为B，否则什么都不做。
 
+
 11、Java中Unsafe类详解
-通过Unsafe类可以分配内存，可以释放内存；类中提供的3个本地方法allocateMemory、reallocateMemory、freeMemory分别用于分配内存，扩充内存和释放内存，与C语言中的3个方法对应。
+通过Unsafe类可以分配内存，可以释放内存；
+类中提供的3个本地方法allocateMemory、reallocateMemory、freeMemory分别用于分配内存，扩充内存和释放内存，与C语言中的3个方法对应。
 可以定位对象某字段的内存位置，也可以修改对象的字段值，即使它是私有的；
 挂起与恢复:将一个线程进行挂起是通过park方法实现的，调用 park后，线程将一直阻塞直到超时或者中断等条件出现。unpark可以终止一个挂起的线程，使其恢复正常。整个并发框架中对线程的挂起操作被封装在 LockSupport类中，LockSupport类中有各种版本pack方法，但最终都调用了Unsafe.park()方法。
-cas 
-Java中Unsafe类详解
+
 
 12、线程池
 线程池的作用： 
@@ -89,7 +92,6 @@ workQueue:线程池中的任务队列.
 常用的有三种队列，SynchronousQueue,LinkedBlockingDeque,ArrayBlockingQueue。
 
 threadFactory:线程工厂，提供创建新线程的功能。ThreadFactory是一个接口，只有一个方法
-
 原理
 如果当前池大小 poolSize 小于 corePoolSize ，则创建新线程执行任务。
 如果当前池大小 poolSize 大于 corePoolSize ，且等待队列未满，则进入等待队列
@@ -97,13 +99,14 @@ threadFactory:线程工厂，提供创建新线程的功能。ThreadFactory是�
 如果当前池大小 poolSize 大于 corePoolSize 且大于 maximumPoolSize ，且等待队列已满，则调用拒绝策略来处理该任务。
 线程池里的每个线程执行完任务后不会立刻退出，而是会去检查下等待队列里是否还有线程任务需要执行，如果在 keepAliveTime 里等不到新的任务了，那么线程就会退出。
 
-13、Executor拒绝策略
+Executor拒绝策略
 AbortPolicy:为java线程池默认的阻塞策略，不执行此任务，而且直接抛出一个运行时异常，切记ThreadPoolExecutor.execute需要try 
 catch，否则程序会直接退出.
 DiscardPolicy:直接抛弃，任务不执行，空方法
 DiscardOldestPolicy:从队列里面抛弃head的一个任务，并再次execute 此task。
 CallerRunsPolicy:在调用execute的线程里面执行此command，会阻塞入
 用户自定义拒绝策略:实现RejectedExecutionHandler，并自己定义策略模式
+
 14、CachedThreadPool 、 FixedThreadPool、SingleThreadPool
 newSingleThreadExecutor :创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务， 保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行 
 适用场景：任务少 ，并且不需要并发执行
