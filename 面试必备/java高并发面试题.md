@@ -45,6 +45,14 @@ b) tryLock(), 如果获取了锁立即返回true，如果别的线程正持有�
 c)tryLock(long timeout,TimeUnit unit)， 如果获取了锁定立即返回true，如果别的线程正持有锁，会等待参数给定的时间，在等待的过程中，如果获取了锁定，就返回true，如果等待超时，返回false； 
 d) lockInterruptibly:如果获取了锁定立即返回，如果没有获取锁定，当前线程处于休眠状态，直到或者锁定，或者当前线程被别的线程中断
 
+总体的结论先摆出来：
+
+synchronized： 
+在资源竞争不是很激烈的情况下，偶尔会有同步的情形下，synchronized是很合适的。原因在于，编译程序通常会尽可能的进行优化synchronized，另外可读性非常好，不管用没用过5.0多线程包的程序员都能理解。 
+ReentrantLock: 
+ReentrantLock提供了多样化的同步，比如有时间限制的同步，可以被Interrupt的同步（synchronized的同步是不能Interrupt的）等。在资源竞争不激烈的情形下，性能稍微比synchronized差点点。但是当同步非常激烈的时候，synchronized的性能一下子能下降好几十倍。而ReentrantLock确还能维持常态。
+
+[详解synchronized与Lock的区别与使用](https://blog.csdn.net/u012403290/article/details/64910926?locationNum=11&fps=1)
 
 
 9、Volatile和Synchronized
@@ -270,3 +278,6 @@ interrupt()和线程终止方式
 --------------------- 
 ```
 原文：https://blog.csdn.net/u012998254/article/details/79400549 
+
+[Core Java 并发：理解并发概念](https://mp.weixin.qq.com/s/ASHGh1lFST0x3XSMrXOiTQ)
+[Java并发编程73道面试题及答案 —— 面试稳了](https://mp.weixin.qq.com/s/Bewg1-MaaUcqJuXq9ydivA)
