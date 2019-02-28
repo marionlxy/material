@@ -1,3 +1,15 @@
+<!-- MarkdownTOC -->
+
+<!-- /MarkdownTOC -->
+<!-- MarkdownTOC -->
+
+- [1.Core Java 并发：理解并发概念](https://mp.weixin.qq.com/s/ASHGh1lFST0x3XSMrXOiTQ)
+- [2.Java并发编程73道面试题及答案 —— 面试稳了](https://mp.weixin.qq.com/s/Bewg1-MaaUcqJuXq9ydivA)
+- [3.Java 并发编程面试必备](https://mp.weixin.qq.com/s/__DUFuIZBkcFb7aZVNRjng)
+
+<!-- /MarkdownTOC -->
+
+
 ```
 1、线程与进程（可以参考，美团，最最最）
 进程是一个实体。每一个进程都有它自己的地址空间，一般情况下，包括文本区域（text region）、数据区域（data region）和堆栈（stack region）。
@@ -279,5 +291,3 @@ interrupt()和线程终止方式
 ```
 原文：https://blog.csdn.net/u012998254/article/details/79400549 
 
-[Core Java 并发：理解并发概念](https://mp.weixin.qq.com/s/ASHGh1lFST0x3XSMrXOiTQ)
-[Java并发编程73道面试题及答案 —— 面试稳了](https://mp.weixin.qq.com/s/Bewg1-MaaUcqJuXq9ydivA)
