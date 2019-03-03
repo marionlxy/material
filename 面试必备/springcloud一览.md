@@ -3,6 +3,8 @@
 
 -[2.Spring Cloud zuul限流详解](http://www.itmuch.com/spring-cloud-sum/spring-cloud-ratelimit/) 
 
-   - [2.1参考advance-java]线程池创建方式，使用
+    - [2.1参考advance-java]线程池创建方式，使用
+    - [2.3.周立的博客](http://www.itmuch.com/spring-cloud/finchley-1/)
+    - [2.4.程序猿dd](http://blog.didispace.com/)
 
   <!-- /MarkdownTOC -->
