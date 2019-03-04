@@ -1,0 +1,3 @@
+- [Java函数式编程和lambda表达式](https://my.oschina.net/u/3971241/blog/2218966)
+- [Java Reactive 异步与并发编程](https://blog.csdn.net/pmlpml/article/details/70470416)
+- [Java 8 的 Lambda 表达式和流处理](https://www.ibm.com/developerworks/cn/java/j-understanding-functional-programming-3/index.html) 来自IBM系列
