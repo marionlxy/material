@@ -275,12 +275,12 @@ Semaphore可以用于做流量控制，特别公用资源有限的应用场景�
 若线程在阻塞状态时，调用了它的interrupt()方法，那么它的“中断状态”会被清除并且会收到一个InterruptedException异常。例如，线程通过wait()进入阻塞状态，此时通过interrupt()中断该线程；调用interrupt()会立即将线程的中断标记设为“true”，但是由于线程处于阻塞状态，所以该“中断标记”会立即被清除为“false”，同时，会产生一个InterruptedException的异常。 
 如果线程被阻塞在一个Selector选择器中，那么通过interrupt()中断它时；线程的中断标记会被设置为true，并且它会立即从选择操作中返回。 
 如果不属于前面所说的情况，那么通过interrupt()中断线程时，它的中断标记会被设置为“true”。 
-中断一个“已终止的线程”不会产生任何操作。
+- 中断一个“已终止的线程”不会产生任何操作。
 
-终止处于“阻塞状态”的线程 
+- 终止处于“阻塞状态”的线程 
 通常，我们通过“中断”方式终止处于“阻塞状态”的线程。 
 当线程由于被调用了sleep(), wait(), join()等方法而进入阻塞状态；若此时调用线程的interrupt()将线程的中断标记设为true。由于处于阻塞状态，中断标记会被清除，同时产生一个InterruptedException异常。将InterruptedException放在适当的为止就能终止线程， 
-终止处于“运行状态”的线程
+- 终止处于“运行状态”的线程
 
 interrupted() 和 isInterrupted()的区别
 最后谈谈 interrupted() 和 isInterrupted()。 
