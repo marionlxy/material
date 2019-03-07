@@ -359,7 +359,7 @@ G1收集器的运作大致分为以下几个步骤：
 
 - 《深入理解Java虚拟机：JVM高级特性与最佳实践（第二版》
 - https://my.oschina.net/hosee/blog/644618
-
+- [关于 JVM 内存的 N 个问题](https://mp.weixin.qq.com/s/uP-f4jHE4fZyjgozO3qKFg)
 
 
 
