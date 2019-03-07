@@ -2,22 +2,22 @@
 **目录：**
 <!-- MarkdownTOC -->
 
-- 1 AQS 简单介绍
-- 2 AQS 原理
-  - 2.1 AQS 原理概览
-  - 2.2 AQS 对资源的共享方式
-  - 2.3 AQS底层使用了模板方法模式
-- 3 Semaphore\(信号量\)-允许多个线程同时访问
-- 4 CountDownLatch （倒计时器）
-  - 4.1 CountDownLatch 的三种典型用法
-  - 4.2 CountDownLatch 的使用示例
-  - 4.3 CountDownLatch 的不足
-  - 4.4 CountDownLatch相常见面试题：
-- 5 CyclicBarrier\(循环栅栏\)
-  - 5.1 CyclicBarrier 的应用场景
-  - 5.2 CyclicBarrier 的使用示例
-  - 5.3 CyclicBarrier和CountDownLatch的区别
-- 6 ReentrantLock 和 ReentrantReadWriteLock
+- [1 AQS 简单介绍](#1-aqs-简单介绍)
+- [2 AQS 原理](#2-aqs-原理)
+  - [2.1 AQS 原理概览](#21-aqs-原理概览)
+  - [2.2 AQS 对资源的共享方式](#22-aqs-对资源的共享方式)
+  - [2.3 AQS底层使用了模板方法模式](#23-aqs底层使用了模板方法模式)
+- [3 Semaphore\(信号量\)-允许多个线程同时访问](#3-semaphore信号量-允许多个线程同时访问)
+- [4 CountDownLatch （倒计时器）](#4-countdownlatch-倒计时器)
+  - [4.1 CountDownLatch 的三种典型用法](#41-countdownlatch-的三种典型用法)
+  - [4.2 CountDownLatch 的使用示例](#42-countdownlatch-的使用示例)
+  - [4.3 CountDownLatch 的不足](#43-countdownlatch-的不足)
+  - [4.4 CountDownLatch相常见面试题：](#44-countdownlatch相常见面试题)
+- [5 CyclicBarrier\(循环栅栏\)](#5-cyclicbarrier循环栅栏)
+  - [5.1 CyclicBarrier 的应用场景](#51-cyclicbarrier-的应用场景)
+  - [5.2 CyclicBarrier 的使用示例](#52-cyclicbarrier-的使用示例)
+  - [5.3 CyclicBarrier和CountDownLatch的区别](#53-cyclicbarrier和countdownlatch的区别)
+- [6 ReentrantLock 和 ReentrantReadWriteLock](#6-reentrantlock-和-reentrantreadwritelock)
 
 <!-- /MarkdownTOC -->
 
@@ -37,7 +37,7 @@ AQS是一个用来构建锁和同步器的框架，使用AQS能简单且高效�
 
 ### 2 AQS 原理
 
-> 在面试中被问到并发知识的时候，大多都会被问到“请你说一下自己对于AQS原理的理解”。下面给大家一个示例供大家参加，面试不是背题，大家一定要假如自己的思想，即使加入不了自己的思想也要保证自己能够通俗的讲出来而不是背出来。
+> 在面试中被问到并发知识的时候，大多都会被问到“请你说一下自己对于AQS原理的理解”。下面给大家一个示例供大家参加，面试不是背题，大家一定要加入自己的思想，即使加入不了自己的思想也要保证自己能够通俗的讲出来而不是背出来。
 
 下面大部分内容其实在AQS类注释上已经给出了，不过是英语看着比较吃力一点，感兴趣的话可以看看源码。
 
@@ -109,17 +109,6 @@ tryRelease(int)//独占方式。尝试释放资源，成功则返回true，失�
 tryAcquireShared(int)//共享方式。尝试获取资源。负数表示失败；0表示成功，但没有剩余可用资源；正数表示成功，且有剩余资源。
 tryReleaseShared(int)//共享方式。尝试释放资源，成功则返回true，失败则返回false。
 
-AQS包含两种方法，一种是acquire，另一种是release。
-//acquire操作阻塞调用的线程，直到或除非同步状态允许其继续执行。
-while(synchronization state does not allow acquire) {
-        enqueue current thread if not already queued;
-        possibly block current thread;
-    }
-    dequeue current thread if it was queued;
-//而release操作则是通过某种方式改变同步状态，使得一或多个被acquire阻塞的线程继续执行。
-update synchronization state;
-    if (state may permit a blocked thread to acquire)
-        unblock one or more queued threads;
 ```
 
 默认情况下，每个方法都抛出 `UnsupportedOperationException`。 这些方法的实现必须是内部线程安全的，并且通常应该简短而不是阻塞。AQS类中的其他方法都是final ，所以无法被其他类使用，只有这几个方法可以被其他类使用。 
@@ -347,7 +336,8 @@ public class CyclicBarrierExample2 {
   public static void test(int threadnum) throws InterruptedException, BrokenBarrierException {
     System.out.println("threadnum:" + threadnum + "is ready");
     try {
-      cyclicBarrier.await(2000, TimeUnit.MILLISECONDS);
+      /**等待60秒，保证子线程完全执行结束*/  
+      cyclicBarrier.await(60, TimeUnit.SECONDS);
     } catch (Exception e) {
       System.out.println("-----CyclicBarrierException------");
     }
