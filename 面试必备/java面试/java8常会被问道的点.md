@@ -20,9 +20,8 @@ try-with-resources语句是声明了一个或多个资源的try语句块。在ja
 
 在java 7之前，一般在进行文件IO操作时都需要显式的进行文件流（也可以理解为资源）的close操作，无论是操作到文件流末尾还是发生异常。往往很简单的一个逻辑都要好几行的代码进行修饰，使得代码结构变的复杂。如下例子，不管try语句块正常结束还是发生异常，都可以使用finally语句块来确保资源被关闭：
 
+```
 public final class CopyFile {////使用final定义工具类，不用实例化
-
-
     private CopyFile() {   //若实例化，则报错
         throw new AssertionError();
     }
