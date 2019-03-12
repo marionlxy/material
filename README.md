@@ -1,5 +1,8 @@
 # 集成知识
-  
+<div align="center">  
+<img src="https://raw.githubusercontent.com/marionlxy/material/newew_branch/logo.jpg" width=""/>
+</br>
+</div>
 
 # 关于me
 
