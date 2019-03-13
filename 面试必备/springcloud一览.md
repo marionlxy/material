@@ -18,3 +18,5 @@
     -[2.8 Spring Cloud Alibaba 基础教程阶段性合集](https://mp.weixin.qq.com/s/KCFZX6PXcS82koGZ5taKEg)
     -[快速体验 Sentinel 集群限流功能，只需简单几步](https://mp.weixin.qq.com/s/pL3XD1_EKPBF-j3hnJ7Vlw)
 - [3.吐血整理 20 道 Spring Boot 面试题，我经常拿来面试别人！](https://zhuanlan.zhihu.com/p/47162611)
+- [4.springboot+springcloud相关面试题](https://blog.csdn.net/LRXmrlirixing/article/details/80864675)
+- [https://www.imooc.com/article/23679](https://www.imooc.com/article/23679)
