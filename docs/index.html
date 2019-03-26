@@ -8,9 +8,12 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/prism.css">
+   <!-- Plugin gitalk -->
+  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
 </head>
 <body>
   <div id="app"></div>
+  <div id="gitalk-container"></div>
   <script>
     window.$docsify = {
       name: 'material',
@@ -21,12 +24,33 @@
       homepage: 'README.md',
       coverpage: true,//封面,_coverpage.md
       auto2top: true,//切换页面后是否自动跳转到页面顶部
-      //onlyCover: true//只显示封面
+      // ************************* Plugins *************************
+      // https://docsify.js.org/#/zh-cn/plugins
+      // 全文搜索 - Search
+      search: 'auto',
+      //onlyCover: true,//只显示封面
     //logo: 'https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-3logo-透明.png' ,
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <!--Java代码高亮-->
   <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+  <!-- ************************* Plugins ************************* -->
+  <!-- Plugins：全文搜索 -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+   <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: 'b5fe587f78015f860e65',
+      clientSecret: '790b09f65bb294b977a828b112b621cca5e92f94',
+      repo: 'material',
+      owner: 'marionlxy',
+      admin: ['marionlxy'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+    gitalk.render('gitalk-container');    // 渲染Gitalk评论组件
+  </script>
 </body>
 </html>

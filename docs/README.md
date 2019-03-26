@@ -1,3 +1,3 @@
-# Headline
+# README
 
 > An awesome project.
