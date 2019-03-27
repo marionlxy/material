@@ -7,13 +7,13 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/prism.css">
+ <!--  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/prism.css"> -->
    <!-- Plugin gitalk -->
   <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
 </head>
 <body>
   <div id="app"></div>
-  <!-- <div id="gitalk-container"></div> -->
+
   <script>
     window.$docsify = {
       name: 'material',
@@ -34,7 +34,7 @@
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <!--Java代码高亮-->
-  <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+  <!-- <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script> -->
   <!-- ************************* Plugins ************************* -->
   <!-- Plugins：全文搜索 -->
   <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
@@ -48,9 +48,18 @@
       owner: 'marionlxy',
       admin: ['marionlxy'],
       // facebook-like distraction free mode
-      distractionFreeMode: false
+      distractionFreeMode: false,
+      // title: location.hash.match(/#(.*?)([?]|$)/)[1],
+      // id: location.hash.match(/#(.*?)([?]|$)/)[1],
+      //id: location.pathname,
     })
-    gitalk.render('gitalk-container');    // 渲染Gitalk评论组件
+     gitalk.render('app');    // 渲染Gitalk评论组件
+    // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
+    // window.onhashchange = function(event){
+    //   if(event.newURL.split('?')[0] !== event.oldURL .split('?')[0]) {
+    //     location.reload()
+    //   }
+    // }
   </script>
 </body>
 </html>
