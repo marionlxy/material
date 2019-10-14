@@ -25,6 +25,11 @@
 进群要求：少提问、少闲聊、多分享（长期潜水的，就不必了）。
 关注微信公众号「精进者小样」，学习代码之外的技能。扫一扫，你将发现一个全新的世界，而这将是一场美丽的意外：
 
+<div align="center">  
+<a href="https://github.com/marionlxy/material" target="_blank" rel="noopener noreferrer"><img width="" style="max-width:100%;" src="https://raw.githubusercontent.com/marionlxy/material/source/weixinchat.jpg"></a>
+<br>
+</div>
+
 # 与诸君共勉
 《庄子·内篇·养生主第三》，原文"吾生也有涯，而知也无涯。以有涯随无涯，殆已！已而为知者，
 殆而已矣！为善无近名，为恶无近刑，缘督以为经，可以保身，可以全生，可以养亲，可以尽年。这是我最喜欢的人生态度，与大家共勉.
