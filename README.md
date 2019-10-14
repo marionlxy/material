@@ -1,8 +1,5 @@
 # 精进者小样，博学者多怒
-<div align="center">  
-<a href="https://github.com/marionlxy/material" target="_blank" rel="noopener noreferrer"><img width="" style="max-width:100%;" src="https://raw.githubusercontent.com/marionlxy/material/source/weixinchat.jpg"></a>
-<br>
-</div>
+
 
 # 介绍
 
@@ -20,10 +17,10 @@
   
 
 # 学习交流
-我建了一个“精进者学习”的微信交流群，目前来看，学习氛围很不错。在下方公众号里回复「精进」，拉你进群：
-进群暗号：精进。
-进群要求：少提问、少闲聊、多分享（长期潜水的，就不必了）。
-关注微信公众号「精进者小样」，学习代码之外的技能。扫一扫，你将发现一个全新的世界，而这将是一场美丽的意外：
+- 我建了一个“精进者学习”的微信交流群，目前来看，学习氛围很不错。在下方公众号里回复「精进」，拉你进群：
+- 进群暗号：精进。
+- 进群要求：少提问、少闲聊、多分享（长期潜水的，就不必了）。
+- 关注微信公众号「精进者小样」，学习代码之外的技能。扫一扫，你将发现一个全新的世界，而这将是一场美丽的意外：
 
 <div align="center">  
 <a href="https://github.com/marionlxy/material" target="_blank" rel="noopener noreferrer"><img width="" style="max-width:100%;" src="https://raw.githubusercontent.com/marionlxy/material/source/weixinchat.jpg"></a>
