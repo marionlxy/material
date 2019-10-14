@@ -1,4 +1,8 @@
 # 精进者小样，博学者多怒
+<div align="center">  
+<a href="https://raw.githubusercontent.com/marionlxy/material/newew_branch/weixinchat.jpg" target="_blank" rel="noopener noreferrer"><img width="" style="max-width:100%;" src="https://raw.githubusercontent.com/marionlxy/material/newew_branch/logo.jpg"></a>
+<br>
+</div>
 
 # 介绍
 
