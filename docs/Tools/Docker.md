@@ -48,6 +48,9 @@
 ### 1.2 图解物理机,虚拟机与容器
 关于虚拟机与容器的对比在后面会详细介绍到，这里只是通过网上的图片加深大家对于物理机、虚拟机与容器这三者的理解。
 
+
+![docker与lxc](https://raw.githubusercontent.com/marionlxy/material/source/docker与lxc.jpg)
+
 **物理机**
 ![物理机](https://user-gold-cdn.xitu.io/2018/6/18/1641129f0ecdf8ff?w=720&h=353&f=jpeg&s=55729)
 
