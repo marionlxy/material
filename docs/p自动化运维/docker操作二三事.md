@@ -2,3 +2,6 @@
 docker run -it --rm -p 9001:9002 dockerpracticesig/docker_practice
 不删除旧包（必须指定为80端口暴露应用）
 docker run -d -p 9001:80 dockerpracticesig/docker_practice:latest
+
+## 进入容器
+docker exec -it e6df72ae469a  sh
