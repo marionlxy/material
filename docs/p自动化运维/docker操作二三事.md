@@ -2,6 +2,8 @@
 docker run -it --rm -p 9001:9002 dockerpracticesig/docker_practice
 不删除旧包（必须指定为80端口暴露应用）
 docker run -d -p 9001:80 dockerpracticesig/docker_practice:latest
+docker run --net=host -d bitnami/etcd:latest /usr/local/bin/etcd --addr=127.0.0.1:4001 --bind-addr=0.0.0.0:4001 --data-dir=/var/etcd/data
+docker build -t bitnami/etcd:latest 'https://github.com/bitnami/bitnami-docker-nginx.git#master:3/debian-9'
 
 ## 进入容器
 docker exec -it e6df72ae469a  sh
