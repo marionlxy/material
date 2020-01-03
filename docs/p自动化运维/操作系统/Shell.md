@@ -70,7 +70,7 @@ W3Cschool 上的一篇文章是这样介绍 Shell的，如下图所示。
 helloworld.sh 内容如下：
 
 ```shell
-#!/bin/bash
+#!/bin/bashE
 #第一个shell小程序,echo 是linux中的输出命令。
 echo  "helloworld!"
 ```
@@ -555,3 +555,22 @@ funWithParam 1 2 3 4 5 6 7 8 9 34 73
 作为一个字符串输出所有参数 1 2 3 4 5 6 7 8 9 34 73 !
 
 ```
+
+
+出现问题的对症下药
+XFTP
+下载相关安装包并解压
+安装包：Xftp中文客户端破解版-百度网盘 https://pan.baidu.com/share/init?surl=xjAS5Is0oHXFtAE0NgnZTQ 提取码：6y0h
+运行可执行文件“绿化.bat”
+安装过程中请**放行**操作，目的是写入 Host 屏蔽联网检查 KEY 和更新
+
+安装成功，打开软件
+
+XShell 6
+下载相关安装包并解压
+安装包：Xshell6 中文客户端破解版-百度网盘https://pan.baidu.com/s/1hi412VRNAFK-bWwk_Hk0EQ 提取码：bzph
+运行可执行文件“绿化.bat”
+安装过程中请**放行**操作，目的是写入 Host 屏蔽联网检查 KEY 和更新
+
+
+安装成功，打开软件
