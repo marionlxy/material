@@ -1,0 +1,26 @@
+{
+  "name": "material",
+  "version": "1.0.0",
+  "description": "人在寂寞中有三种状态。一是惶惶不安，茫无头绪，百事无心，一心逃出寂寞。\r 二是渐渐习惯于寂寞，安下心来，建立起生活的条理，用读书、写作或别的事务来驱逐寂寞。\r 三是寂寞本身成为一片诗意的土壤，一种创造的契机，\r 诱发出关于存在、生命、自我的深邃思考和体验。——周国平，《独处是一种能力》",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "npm i docsify-cli -g",
+    "init": "docsify init ./docs",
+    "doc": "docsify serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marionlxy/material.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marionlxy/material/issues"
+  },
+  "homepage": "https://github.com/marionlxy/material#readme"
+}
