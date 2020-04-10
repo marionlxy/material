@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1347dcee-7be9-4c30-9fe6-d367dffc68f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/docs/_coverpage.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_coverpage.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_navbar.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_navbar.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +31,9 @@
         <entry file="file://$PROJECT_DIR$/docs/_coverpage.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="23">
+                <caret line="1" selection-start-line="1" selection-end-line="1" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -426,7 +427,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70138000" />
+    <option name="totallyTimeSpent" value="70496000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -888,7 +889,9 @@
     <entry file="file://$PROJECT_DIR$/docs/_coverpage.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="23">
+            <caret line="1" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>
