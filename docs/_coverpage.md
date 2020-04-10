@@ -1,4 +1,7 @@
+
 ![logo](https://raw.githubusercontent.com/marionlxy/material/source/weixinchat.jpg)
+
+
 # 我的微信
 ## 个人精进
 > 努力不是一场意志力的较量，而是一种需求学习的策略
