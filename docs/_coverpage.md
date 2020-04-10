@@ -1,11 +1,11 @@
-![logo](https://raw.githubusercontent.com/marionlxy/material/newew_branch/logo.jpg)
-# 我的文档网站
-## small yang个人文档网站
+![logo](https://raw.githubusercontent.com/marionlxy/material/source/weixinchat.jpg)
+# 我的微信，求勾搭
+## 个人精进
 > 集成知识/主要关于java方面
 
-* Simple and lightweight (~12kb gzipped)
-* Multiple themes
-* Not build static html files
+* 生活感悟
+* 技术成长
+* 我的人生
 
 [docsify](https://segmentfault.com/a/1190000017576714)
 [常用资源](https://shimo.im/docs/PKKjQLwBfX0DgG0J/)
