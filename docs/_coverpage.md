@@ -1,7 +1,7 @@
 ![logo](https://raw.githubusercontent.com/marionlxy/material/source/weixinchat.jpg)
-# 我的微信，求勾搭
+# 我的微信
 ## 个人精进
-> 集成知识/主要关于java方面
+> 努力不是一场意志力的较量，而是一种需求学习的策略
 
 * 生活感悟
 * 技术成长
