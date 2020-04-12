@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/marionlxy/material/source/weixinchat.jpg" style="zoom:50%" />
 
 ### 我的微信
-## 个人精进
+## 小样
 > 努力不是一场意志力的较量，而是一种需求学习的策略
 
 *生活感悟  技术成长  我的人生*
