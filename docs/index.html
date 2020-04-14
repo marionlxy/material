@@ -7,59 +7,56 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
- <!--  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/prism.css"> -->
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/prism.css">
    <!-- Plugin gitalk -->
-  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+
 </head>
 <body>
   <div id="app"></div>
-
+  <!-- docsify-edit-on-github -->
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
   <script>
+      // 离线支持
+      if (typeof navigator.serviceWorker !== 'undefined') {
+          navigator.serviceWorker.register('sw.js')
+      }
     window.$docsify = {
       name: 'material',
       repo: 'https://github.com/marionlxy/material',
       loadSidebar: true,
       loadNavbar: true,
       maxLevel: 6,//最大支持渲染的标题层级
+      autoHeader: true,
+      auto2top: true,
+      subMaxLevel: 2,
       homepage: 'README.md',
       coverpage: true,//封面,_coverpage.md
       auto2top: true,//切换页面后是否自动跳转到页面顶部
       // ************************* Plugins *************************
       // https://docsify.js.org/#/zh-cn/plugins
       // 全文搜索 - Search
-      search: 'auto',
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        noData: '找不到结果',//搜索不到结果时显示
+        paths: 'auto',//自动
+        placeholder: '搜索',//搜索框提示
+      },
       //onlyCover: true,//只显示封面
     //logo: 'https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-3logo-透明.png' ,
+        plugins: [
+            EditOnGithubPlugin.create('https://github.com/marionlxy/material/blob/master/')
+        ]
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <!--Java代码高亮-->
-  <!-- <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script> -->
+   <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
   <!-- ************************* Plugins ************************* -->
   <!-- Plugins：全文搜索 -->
   <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
-   <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script>
-    const gitalk = new Gitalk({
-      clientID: 'b5fe587f78015f860e65',
-      clientSecret: '790b09f65bb294b977a828b112b621cca5e92f94',
-      repo: 'material',
-      owner: 'marionlxy',
-      admin: ['marionlxy'],
-      // facebook-like distraction free mode
-      distractionFreeMode: false,
-      // title: location.hash.match(/#(.*?)([?]|$)/)[1],
-      // id: location.hash.match(/#(.*?)([?]|$)/)[1],
-      //id: location.pathname,
-    })
-     gitalk.render('app');    // 渲染Gitalk评论组件
-    // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
-    // window.onhashchange = function(event){
-    //   if(event.newURL.split('?')[0] !== event.oldURL .split('?')[0]) {
-    //     location.reload()
-    //   }
-    // }
-  </script>
+  <!-- 复制到剪贴板 -->
+  <script src="//unpkg.com/docsify-copy-code"></script>
+  <!-- 图片缩放 -->
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
 </body>
 </html>

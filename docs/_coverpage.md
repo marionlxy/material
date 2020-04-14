@@ -4,7 +4,7 @@
 ## 小样
 > 努力不是一场意志力的较量，而是一种需求学习的策略
 
-*生活感悟  技术成长  我的人生*
+**生活感悟**  **技术成长**  **我的人生**
 
 [docsify](https://segmentfault.com/a/1190000017576714)
 [常用资源](https://shimo.im/docs/PKKjQLwBfX0DgG0J/)
