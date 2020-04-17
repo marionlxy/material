@@ -1,7 +1,7 @@
 # 小样 
-欢迎贡献gitee: https://gitee.com/marion_group/material.git
-欢迎贡献github: https://github.com/marionlxy/material.git
-国内访问:https://marion_group.gitee.io/material
+* 欢迎贡献gitee: https://gitee.com/marion_group/material.git
+* 欢迎贡献github: https://github.com/marionlxy/material.git
+* 国内访问:https://marion_group.gitee.io/material
 
 # 介绍
 
