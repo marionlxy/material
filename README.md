@@ -1,6 +1,8 @@
 # 小样 
+欢迎贡献gitee: https://gitee.com/marion_group/material.git
+欢迎贡献github: https://github.com/marionlxy/material.git
+国内访问:https://marion_group.gitee.io/material
 
-欢迎讨论:https://marionlxy.github.io/material/
 # 介绍
 
 *  **对于 Java 初学者来说：** 本文档倾向于给你提供一个比较详细的学习路径，让你对于Java整体的知识体系有一个初步认识。另外，本文的一些文章
