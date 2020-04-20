@@ -11,7 +11,7 @@ docker build -t bitnami/etcd:latest 'https://github.com/bitnami/bitnami-docker-n
 ## 进入容器
 docker exec -it e6df72ae469a  sh
 
-docker exec -it bd19b20f2adc  sh
+docker exec -it --user root bd19b20f2adc  sh
 ## 3.docker-compose常用命令
 docker-compose up -d nginx                     构建建启动nignx容器
 docker-compose exec nginx bash /docker-compose exec yapi-web bash           登录到nginx容器中

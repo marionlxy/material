@@ -56,5 +56,6 @@ mvn dependency:tree
 
 ## 3、自动配置
 
-### 3.1 @SpringBootApplication注解
+### 3.1 首先了解@SpringBootApplication注解
 
+### 3.2 spring-boot-autoconfigure jar
