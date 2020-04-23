@@ -44,18 +44,122 @@ Spring的生态圈里正在出现很多让人激动的新鲜事物，涉及的�
 
 ### 2.1 springboot创建项目
 
-### 2.2 pom依赖传递
+```
+<!--springboot工程需要继承的父工程-->
+<parent>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-parent</artifactId>
+<version>2.1.5.RELEASE</version>
+</parent>
+```
 
-父parent声明，依赖传递管理
+```
+<!--依赖web启动器-->
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+```
+
+ pom依赖传递父parent声明，依赖传递管理，比如查看依赖树
 
 ```
 mvn dependency:tree
 ```
 
-
-
-## 3、自动配置
+## 3、springboot配置
 
 ### 3.1 首先了解@SpringBootApplication注解
 
-### 3.2 spring-boot-autoconfigure jar
+### 3.2 内部配置文件加载顺序
+
+- file:./config/：当前项目下的/config目录下
+
+- file:./ ：当前项目的根目录
+
+- classpath:/config/：classpath的/config目录
+
+- classpath:/ ：classpath的根目录
+
+  
+
+### 3.3 外部配置文件加载顺序
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-f
+eatures-external-config
+
+1.命令行
+
+```
+java -jar icoding-init-1.0-SNAPSHOT.jar --server.port=9000 --
+server.servlet.context-path=/icoding01
+```
+
+2.指定配置文件位置
+
+```
+java -jar icoding-init-1.0-SNAPSHOT.jar --
+spring.config.location=C://icoding//springboot//application.yml
+```
+
+3.外部不带profile的yml文件
+
+```
+classpath:/config/application.yml
+classpath:/application.yml
+```
+
+## 4.springboot自动配置原理解析
+
+### 4.1Condition(条件)
+
+Condition是Spring4.0后引入的条件化配置接口，通过实现Condition接口可以完成有条件的加载相应
+的Bean。
+
+总结：
+@ConditionalOnBean（仅仅在当前上下文中存在某个对象时，才会实例化一个Bean）
+@ConditionalOnClass（某个class位于类路径上，才会实例化一个Bean）
+@ConditionalOnExpression（当表达式为true的时候，才会实例化一个Bean）
+@ConditionalOnMissingBean（仅仅在当前上下文中不存在某个对象时，才会实例化一个Bean）
+@ConditionalOnMissingClass（某个class类路径上不存在的时候，才会实例化一个Bean）
+@ConditionalOnNotWebApplication（不是web应用）
+
+### 4.2Enable注解原理
+
+## 5.springboot监听机制
+
+### 5.1java事件监听角色
+
+Java中的事件监听机制定义了以下几个角色：
+事件：Event，继承 java.util.EventObject 类的对象
+事件源：Source ，任意对象Object
+监听器：Listener，实现 java.util.EventListener 接口 的对象
+
+### 5.2启动时回调的4个监听器
+
+SpringBoot 在项目启动时，会对几个监听器进行回调，我们可以实现这些监听器接口，在项目启动时
+完成一些操作。
+ApplicationContextInitializer、
+SpringApplicationRunListener、
+CommandLineRunner、
+ApplicationRunner
+创建包：listener
+自定义监听器的启动时机：MyApplicationRunner和MyCommandLineRunner都是当项目启动后执
+行，使用@Component放入容器即可使用
+
+![image-20200423211049906](C:\Users\My\AppData\Roaming\Typora\typora-user-images\image-20200423211049906.png)
+
+
+
+## 6.自定义starter
+
+
+
+# 7.springboot常规使用
+
+## 7.1 spring跨域问题
+
+## 7.2 集成swagger
+
+### 7.3 多数据源问题
+
