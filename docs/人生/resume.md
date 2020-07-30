@@ -6,19 +6,18 @@
 
 # 个人信息
 
- - 姓名/性别/出生日期 
- - 本科/xxx计算机系xxx专业/英语六级
- - 技术博客：[http://snailclimb.top/](http://snailclimb.top/) 
- - 荣誉奖励：获得了什么奖（获奖时间）
- - Github：[https://github.com/Snailclimb ](https://github.com/Snailclimb)
+ - 李小阳/男/1989年10月8日 
+ - 本科/软件工程/英语四级/湖南科技大学
+ - 技术博客：[https://marionlxy.github.io/]https://marionlxy.github.io/) 
+ - Github：[https://github.com/marionlxy/material](https://github.com/marionlxy/material)
  - Github Resume: [http://resume.github.io/?Snailclimb](http://resume.github.io/?Snailclimb)
- - 期望职位：Java 研发程序员/大数据工程师(Java后台开发为首选)
- - 期望城市：xxx城市
+ - 期望职位：Java 研发程序员/全栈工程师(Java后台开发为首选)
+ - 期望城市：长沙
 
 
 # 项目经历
 
-## xxx项目
+## 1、中联环境智慧环卫项目
 
 ### 项目描述
 
@@ -36,7 +35,7 @@
 
 ## 开源项目
 
-- [Java-Guide](https://github.com/Snailclimb/Java-Guide) ：一份涵盖大部分Java程序员所需要掌握的核心知识。Star:3.9K; Fork:0.9k。
+- 
 
 
 ## 技术文章推荐
@@ -47,33 +46,32 @@
 - [可能是把Docker的概念讲的最清楚的一篇文章](https://juejin.im/post/5b260ec26fb9a00e8e4b031a)
 
 
-# 校园经历（可选）
+# 校园经历
 
-## 2016-2017
+## 2011-2012
 
-担任学校社团-致深社副会长，主要负责团队每周活动的组建以及每周例会的主持。
-
-## 2017-2018
-
- 担任学校传媒组织：“长江大学在线信息传媒”的副站长以及安卓组成员。主要负责每周例会主持、活动策划以及学校校园通APP的研发工作。
-
+担任学院社团-体育部副部长，主要负责团队每周活动的组建以及协助学院同其他学院体育赛事活动。
+ 
 
 # 技能清单
 
 以下均为我熟练使用的技能
 
-- Web开发：PHP/Hack/Node
-- Web框架：ThinkPHP/Yaf/Yii/Lavarel/LazyPHP
-- 前端框架：Bootstrap/AngularJS/EmberJS/HTML5/Cocos2dJS/ionic
-- 前端工具：Bower/Gulp/SaSS/LeSS/PhoneGap
-- 数据库相关：MySQL/PgSQL/PDO/SQLite
-- 版本管理、文档和自动化部署工具：Svn/Git/PHPDoc/Phing/Composer
-- 单元测试：PHPUnit/SimpleTest/Qunit
-- 云和开放平台：SAE/BAE/AWS/微博开放平台/微信应用开发
+- Web开发：Javascript/Vue全家桶/Nodejs
+- Web框架：SSM/Springmvc/Springboot-web/
+- 前端框架：Bootstrap/Easyui/uniapp
+- 前端工具: Gulp/SaSS/LeSS/cordova/
+- 数据库相关：MySQL/PgSQL/Redis/
+- 版本管理、文档和自动化部署工具：Svn/Git/Jenkins
+- 虚拟化技术：docker/docker-compose
+- 单元测试/负载测试：Junit/JMeter/Loadruner
+- 云和开放平台：Saas,微信开放平台应用开发
 
-# 自我评价（可选）
+# 自我评价
 
-自我发挥。切记不要过度自夸！！！
+本人有7年工作经验，参与过几个大中型，高可用项目，担任项目核心成员
+<br/>有比较丰富的SAP系统经验和互联网+项目经验，有责任心，善于沟通，学习能力强
+<br/>喜欢比较有挑战性的互联网开发项目，平常在github有自己的技术和项目经验积累
 
 
 ### 感谢您花时间阅读我的简历，期待能有机会和您共事。
