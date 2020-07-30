@@ -8,12 +8,13 @@
 
  - 李小阳/男/1989年10月8日 
  - 本科/软件工程/英语四级/湖南科技大学
- - 技术博客：[https://marionlxy.github.io/]https://marionlxy.github.io/) 
+ - 技术博客：[https://marionlxy.github.io/](https://marionlxy.github.io/) 
  - Github：[https://github.com/marionlxy/material/](https://github.com/marionlxy/material/)
  - Github Resume: [https://marionlxy.github.io/material/#/人生/resume](https://marionlxy.github.io/material/#/人生/resume)
  - 期望职位：Java 研发程序员/全栈工程师(Java后台开发为首选)
  - 期望城市：长沙
 
+# 自我描述 
 
 # 项目经历
 
