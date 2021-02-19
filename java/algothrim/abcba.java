@@ -27,6 +27,6 @@ public class abcba {
     }
 
     public static void main(String[] args) {
-      System.out.println(longestPalindrome("bbcc"));
+      System.out.println(longestPalindrome("abccabc"));
     }
 }
