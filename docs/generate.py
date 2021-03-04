@@ -48,4 +48,4 @@ with open('./目录.md', 'w',encoding='utf-8') as datafile:
 			datafile.writelines('## {}年{}月\n\n'.format(file_time.tm_year, file_time.tm_mon))
 
 			last_file_time = file_time
-		datafile.writelines('[{}——{}]({})\n\n'.format(file[2][:-3], time.strftime("%a, %Y-%m-%d, %H:%M:%S", file_time), file[1]))
+		datafile.writelines('[{}——{}]({})\n\n'.format(file[2][:-3], time.strftime("%A, %Y-%m-%d, %H:%M:%S", file_time), file[1]))
